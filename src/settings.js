@@ -1,5 +1,5 @@
 function URL(){
-    return "https://kurisu-da-noda.com/CA2-startcode"
+    return "https://smerved.com/3semExam"
 }
 
 export default URL()
