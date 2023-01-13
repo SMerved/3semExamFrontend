@@ -11,7 +11,7 @@ function Owners() {
     return (
         <div>
             {owners?.map((owner)=>
-                <ul>{owner}</ul>
+                <ul>{owner.name} {owner.address} {owner.phone}</ul>
             )}
         </div>
     );
