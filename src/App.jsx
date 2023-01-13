@@ -5,6 +5,7 @@ import Search from "./pages/Search.jsx";
 import Header from "./components/Header.jsx";
 import User from "./pages/User.jsx";
 import Admin from "./pages/Admin.jsx";
+import Owners from "./pages/Owners.jsx";
 
 
 function App(props) {
@@ -26,6 +27,7 @@ function App(props) {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="search" element={<Search/>}/>
+                <Route path="owners" element={<Owners/>}/>
                 <Route path="user" element={<User/>}/>
                 <Route path="admin" element={<Admin/>}/>
                 <Route path="*" element={<h1>Page Not Found !!!!</h1>}/>
