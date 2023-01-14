@@ -16,11 +16,16 @@ function userFacade() {
 
     const fetchOwners = () => {
         const options = apiFacade.makeOptions("GET", true);
-        return fetch(URL + "/api/owners", options).then(handleHttpErrors);
+        return fetch(URL + "/api/boats/owners", options).then(handleHttpErrors);
+    }
+    const fetchBoatsFromHarbour = (harbourId) => {
+        const options = apiFacade.makeOptions("GET", true);
+        return fetch(URL + "/api/boats/" + harbourId, options).then(handleHttpErrors);
     }
 
     return {
-       fetchOwners
+        fetchOwners,
+        fetchBoatsFromHarbour
     }
 }
 
