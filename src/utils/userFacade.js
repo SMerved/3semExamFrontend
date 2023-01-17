@@ -1,4 +1,3 @@
-
 import settings from "../settings.js";
 import apiFacade from "./apiFacade.js";
 
@@ -18,14 +17,25 @@ function userFacade() {
         const options = apiFacade.makeOptions("GET", true);
         return fetch(URL + "/api/boats/owners", options).then(handleHttpErrors);
     }
+
+    const fetchBoats = () => {
+        const options = apiFacade.makeOptions("GET", true);
+        return fetch(URL + "/api/boats", options).then(handleHttpErrors);
+    }
     const fetchBoatsFromHarbour = (harbourId) => {
         const options = apiFacade.makeOptions("GET", true);
         return fetch(URL + "/api/boats/" + harbourId, options).then(handleHttpErrors);
     }
+    const fetchOwnersFromBoat = (boatId) => {
+        const options = apiFacade.makeOptions("GET", true);
+        return fetch(URL + "/api/boats/owners/" + boatId, options).then(handleHttpErrors);
+    }
 
     return {
         fetchOwners,
-        fetchBoatsFromHarbour
+        fetchBoats,
+        fetchBoatsFromHarbour,
+        fetchOwnersFromBoat
     }
 }
 

@@ -1,0 +1,84 @@
+.outer_div {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Regattafeld_vor_Laboe.jpg/1200px-Regattafeld_vor_Laboe.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    contain: paint;
+}
+
+.boats_outer_div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.boat_divs {
+    border: 1px solid black;
+    margin: 2rem;
+    height: auto;
+    overflow: hidden;
+    width: 21%;
+    background: #dddddd;
+}
+
+.boat_image {
+    width: 100%;
+}
+
+.boat_bottom_div {
+    display: flex;
+    width: 100%;
+    padding: 4px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown_button {
+    width: 10rem;
+    padding: 2px;
+    margin: 2rem 2rem 0;
+}
+
+.menu {
+    position: absolute;
+
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 5px 2rem;
+
+    border: 1px solid grey;
+    width: 10rem;
+}
+
+.menu > li {
+    margin: 0;
+
+    background-color: white;
+}
+
+.menu > li:hover {
+    background-color: lightgray;
+}
+
+.menu > li > button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.boat_owner_button {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
