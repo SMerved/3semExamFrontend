@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import facade from "../utils/apiFacade.js";
+import CreateBoat from "../components/CreateBoat.jsx";
+import '../styles/admin.css'
 
 function Admin(props) {
-    const [adminInfo, setAdminInfo] = useState({})
-    useEffect(  () => {
-        facade.fetchAdminData().then((res) => setAdminInfo(res))
-    },[])
+
     return (
-        <div>{adminInfo.msg}</div>
+        <div>
+            <CreateBoat/>
+        </div>
     );
 }
 
